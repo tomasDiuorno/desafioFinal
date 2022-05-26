@@ -1,0 +1,743 @@
+/*reseteo*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*html home*/
+
+body{
+    background-color: black;
+}
+
+/* estilo de nav con bootstrap */
+
+header{
+    display: flex;
+}
+
+.navbar-collapse{
+    text-align: center;
+}
+
+.nav-item{
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    font-family: 'Bangers', cursive;
+    transition: all 300ms;
+}
+
+.nav-item:hover{
+    transform: scale(1.15);
+}
+
+.navbar-brand{
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+    width: 40%;
+    margin: 1rem;
+    transition: all 300ms;
+}
+
+.logo:hover{
+    transform: scale(1.10);
+}
+
+.main-home{
+    display: grid;
+    grid-template-areas: "video"
+                         "bbc";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2 1fr);
+    height: 55vh;
+    justify-items: center;
+    text-align: center;
+    background-image: url(../img/fondo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.video{
+    grid-area: video;
+    margin-top: 1rem;
+}
+
+.yt-link{
+    width: 420px;
+    height: 210px;
+}
+
+.bbc{
+    grid-area: bbc;
+    position: relative;
+    background-color: #950101;
+    max-height: 250px;
+    border-radius: 2rem;
+    padding: 1rem;
+    margin: 1.5rem;
+    border-style: groove;
+    border-color: whitesmoke;
+    overflow: auto;
+}
+
+.bbc p{
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1rem;
+}
+
+.bbc p a{
+    text-decoration: none;
+    color: white;
+}
+
+.img-tours{
+    display: none;
+}
+
+.footer-home{
+    width: 100vw;
+    position: absolute;
+    text-align: center;
+    background-color: black;
+}
+
+.copy{
+    color: white;
+    font-size: 1.2rem;
+}
+
+/*media screen 760px*/
+@media screen and (min-width:760px){    
+    .logo{
+        width: 40%;
+    }
+
+    .nav-item{
+        font-size: 2rem;
+    }
+
+    .main-home{
+        height: 55vh;
+    }
+
+    .bbc p{
+        font-size: 1.2rem;
+    }
+
+}
+
+/*screen 1280px*/
+@media screen and (min-width: 1280px){
+    
+    .logo{
+        max-width: 50%;
+    }
+
+    .nav-item{
+        font-size: 2.5rem;
+    }
+    
+    .main-home{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .yt-link{
+        width: 460px;
+        height: 260px;
+    }
+
+    .bbc p{
+        font-size: 1.3rem;
+    }
+
+    .bbc p a{
+        transition: all 300ms;
+    }
+
+    .bbc p a:hover{
+        color: #000000;
+    }
+
+    .img-tours{
+        display: block;
+        width: 100vw;
+    }
+
+    .img-tours div{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/*html miembros*/
+
+
+.portada-miembros{
+    background-attachment: fixed;
+    background-image: url(../img/miembrosportada.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 40vh;
+    position: relative;
+    display: none;
+}
+
+.main-miembros{
+    display: flex;
+    flex-flow: wrap column;
+    align-content: center;
+    text-align: center;
+    background-color: #252525;
+    padding: 1rem;  
+} 
+
+.title-miembros{
+    color: #D72323;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-align: center;
+    -webkit-text-stroke: 0.4px;
+    -webkit-text-stroke-color: #000000;
+}
+
+.main-miembros p{
+    background-color: #414141;
+    max-width: 480px;
+    margin: 1rem;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+}
+
+.ex-miembros{
+    color: #D72323;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-align: center;
+    -webkit-text-stroke: 0.4px;
+    -webkit-text-stroke-color: #000000;
+}
+
+.footer-miembros{
+    width: 100vw;
+    position: absolute;
+    text-align: center;
+    background-color: black;
+    padding: 1rem;
+}
+
+/*screen 760px*/
+@media screen and (min-width: 760px) {
+    .logo{
+        width: 40%;
+    }
+    
+    .nav-item{
+        font-size: 2rem;
+    }
+
+    .portada-miembros{
+        display: block;
+    }
+}
+
+/*screen 1280px*/
+@media screen and (min-width: 1280px) {   
+    
+    .logo{
+        max-width: 50%;
+    }
+
+    .nav-item{
+        font-size: 2.5rem;
+    }
+    
+    .title-miembros{
+        font-size: 2rem;
+    }
+
+    .corey-taylor{
+        display: flex;
+        margin: 1rem;
+    }
+
+    .jim-root{
+        margin: 1rem;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .mick-thomson{
+        margin: 1rem;
+        display: flex;
+    }
+
+    .shawn-crahan{
+        margin: 1rem;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .sid-wilson{
+        margin: 1rem;
+        display: flex;
+    }
+
+    .craig-jones{
+        margin: 1rem;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .ex-miembros{
+        font-size: 2rem;
+    }
+    
+
+    .paul-gray{
+        margin: 1rem;
+        display: flex;
+    }
+
+    .joey-jordison{
+        margin: 1rem;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .chris-fehn{
+        margin: 1rem;
+        display: flex;
+    }
+}
+
+/*html discografia*/
+
+.portada-discografia{
+    background-attachment: fixed;
+    background-image: url(../img/portadadiscografia.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 40vh;
+    padding: 4rem;
+    position: relative;
+    display: none;
+}
+
+.main-discografia{
+    background-color: #414141;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-discografia{
+    color: #D72323;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-align: center;
+    -webkit-text-stroke: 0.4px;
+    -webkit-text-stroke-color: #000000;
+    margin-bottom: 1rem;
+}
+
+.footer-discografia{
+    width: 100vw;
+    position: absolute;
+    text-align: center;
+    background-color: black;
+    padding: 1rem;
+}
+
+/*screen 760px*/
+@media screen and (min-width: 760px) {
+     
+    .logo{
+        width: 40%;
+    }
+
+    .nav-item{
+        font-size: 2rem;
+    }
+
+    .albums{
+        display: grid;
+        grid-template-areas:"we-are-not-your-kind the-gray-chapter"
+                             "all-hope-is-gone vol-tres"
+                             "iowa slipknot-album";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.5fr 0.5fr 0.5fr;
+        gap: 1rem;
+    }
+
+    .album-6{
+        grid-area: we-are-not-your-kind;
+    }
+
+    .album-5{
+        grid-area: the-gray-chapter;
+    }
+
+    .album-4{
+        grid-area: all-hope-is-gone;
+    }
+
+    .vol-tres{
+        grid-area: vol-tres;
+    }
+
+    .iowa{
+        grid-area: iowa;
+    }
+
+    .slipknot-album{
+        grid-area: slipknot-album;
+    }
+}
+
+/*screen 1280px*/
+@media screen and (min-width: 1280px) {
+    
+    .logo{
+        max-width: 50%;
+    }
+
+    .nav-item{
+        font-size: 2.5rem;
+    }
+    
+    .portada-discografia{
+        display: block;
+    }
+
+    .title-discografia{
+        font-size: 2rem;
+    }
+    
+    .albums{
+        display: grid;
+        grid-template-areas:"we-are-not-your-kind the-gray-chapter all-hope-is-gone"
+                             "vol-tres iowa slipknot-album"
+                             ;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.5fr 0.5fr;
+        gap: 1rem;
+    }
+
+    .album-6{
+        grid-area: we-are-not-your-kind;
+    }
+
+    .album-5{
+        grid-area: the-gray-chapter;
+    }
+
+    .album-4{
+        grid-area: all-hope-is-gone;
+    }
+
+    .vol-tres{
+        grid-area: vol-tres;
+    }
+
+    .iowa{
+        grid-area: iowa;
+    }
+
+    .slipknot-album{
+        grid-area: slipknot-album;
+    }
+}
+
+/*html tours*/
+
+.tours-portada {
+    background-attachment: fixed;
+    background-image: url(../img/portadatours.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 40vh;
+    position: relative;
+    display: none;
+}
+
+.title-tours{
+    padding-top: 0.5rem;
+    color: #D72323;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-align: center;
+    -webkit-text-stroke: 0.4px;
+    -webkit-text-stroke-color: #000000;
+}
+
+.main-tours{
+    height: 70vh;
+    background-color: #252525
+}
+
+.venta-de-entradas{
+    display: grid;
+    grid-template-areas: "container-fechas container-lugar container-compra";
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    padding: 2rem;
+    background-color: black;
+}
+
+.container-fechas{
+    grid-area: container-fechas;
+    color: white;
+    padding-left: 1rem;
+}
+
+.fecha{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.2rem;
+}
+
+.container-lugar{
+    grid-area: container-lugar;
+    text-align: center;
+}
+
+.lugar{
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.2rem;
+}
+
+.container-compra{
+    grid-area: container-compra;
+    text-align: end;
+}
+
+.ticket a{
+    color: #000000;
+    text-decoration: none;
+    background-color: greenyellow;
+    padding: 0.4rem;
+    font-family: 'Bebas Neue', cursive;
+    border-radius: 0.4rem;
+    font-size: 1.2rem;
+}
+
+.footer-tours{
+    width: 100vw;
+    text-align: center;
+    background-color: black;
+    padding: 1rem;
+}
+
+/*screen 760px*/
+@media screen and (min-width: 760px) {
+    
+    .logo{
+        width: 40%;
+    }
+    
+    .nav-item{
+        font-size: 2rem;
+    }
+    
+    .tours-portada{
+        display: block;
+    }
+
+    .main-tours{
+        height: 80vh;
+    }
+
+    .title-tours{
+        font-size: 2.2rem;
+    }
+
+    .fecha{
+        font-size: 1.5rem;
+    }
+
+    .lugar{
+        font-size: 1.5rem;
+    }
+
+    .ticket a{
+        font-size: 1.5rem;
+    }
+}
+
+/*screen 1280px*/
+@media screen and (min-width: 1280px) {
+
+    .logo{
+        max-width: 50%;
+    }
+
+    .nav-item{
+        font-size: 2.5rem;
+    }
+    
+    .main-tours{
+        height: 80vh;
+    }
+
+    .fecha{
+        font-size: 1.5rem;
+    }
+
+    .lugar{
+        font-size: 1.5rem;
+    }
+
+    .ticket a{
+        font-size: 1.5rem;
+    }
+}
+
+/*html contactanos*/
+
+.contacto-portada {
+    grid-area: contacto-portada;
+    background-attachment: fixed;
+    background-image: url(../img/portadacontacto.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 40vh;
+    padding: 4rem;
+    position: relative;
+    display: none;
+}
+
+.main-contacto{
+    background-color: #252525;
+    text-align: center;
+    height: 100vh;
+}
+
+.title-contacto {
+    color: #D72323;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    padding-top: 1rem;
+    -webkit-text-stroke: 0.4px;
+    -webkit-text-stroke-color: #000000;
+}
+
+.mail-contacto {
+    color: #ffffff;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.2rem;
+    margin: 3%;
+}
+
+.envianos-tu-msj {
+    color: #D72323;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    margin: 2%;
+    -webkit-text-stroke: 0.4px;
+    -webkit-text-stroke-color: #000000;
+}
+
+.footer-contacto{
+    width: 100vw;
+    text-align: center;
+    background-color: black;
+    padding: 1rem;
+}
+
+form {
+    width: 28rem;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+input, textarea {
+    width: 50%;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/*screen 760px*/
+@media screen and (min-width: 760px) {
+
+    .logo{
+        width: 40%;
+    }
+
+    .nav-item{
+        font-size: 2rem;
+    }
+    
+    .title-contacto {
+        font-size: 1.8rem;
+    }
+
+    .mail-contacto {
+        font-size: 1.5rem;
+    }
+
+    .envianos-tu-msj {
+        font-size: 1.8rem;
+    }
+}
+
+/*screen 1280px*/
+@media screen and (min-width: 1280px) {
+  
+    .logo{
+        max-width: 50%;
+    }
+    
+    .nav-item{
+        font-size: 2.5rem;
+    }
+    
+    .contacto-portada{
+        display: block;
+    }
+
+    .title-contacto {
+        font-size: 2rem;
+    }
+
+    .mail-contacto {
+        font-size: 1.8rem;
+    }
+
+    .envianos-tu-msj {
+        font-size: 2rem;
+    }
+
+    form{
+        width: 80rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
