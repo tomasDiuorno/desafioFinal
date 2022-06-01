@@ -1,0 +1,114 @@
+/*reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// link variables
+@import "base/variables";
+
+// index
+ body{
+     background-color: $color-ppal;
+}
+
+/* estilos de nav */
+header{
+    display: flex;
+    .navbar{
+        .container-fluid{
+            .navbar-brand{
+                display: flex;
+                justify-content: center;
+                .logo{
+                    width: 40%;
+                    margin: 1rem;
+                    transition: all 300ms;
+                    &:hover{
+                        transform: scale(1.10);
+                    }
+                }
+            }
+            .navbar-collapse{
+                text-align: center;
+                .navbar-nav{
+                    .nav-item{
+                        margin: 0.5rem;
+                        font-size: 1.5rem;
+                        font-family: 'Bangers', cursive;
+                        transition: all 300ms;
+                        &:hover{
+                            transform: scale(1.15);
+                        }
+                    }
+                }
+            }
+        }
+    }  
+}
+
+.main-home{
+    display: grid;
+    grid-template-areas: "video"
+                         "bbc";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    height: 60vh;
+    justify-items: center;
+    text-align: center;
+    background-image: url(../img/fondo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    .video{
+        grid-area: video;
+        margin-top: 1rem;
+        .yt-link{
+            width: 420px;
+            height: 210px;
+        }
+    }
+    .bbc{
+        grid-area: bbc;
+        position: relative;
+        background-color: $color-terc;
+        height: fit-content;
+        width: fit-content;
+        border-radius: 2rem;
+        padding: 1rem;
+        margin: 1.5rem;
+        border-style: groove;
+        border-color: whitesmoke;
+        overflow: auto;
+        p{
+            color: $color-sec;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1rem;
+            a{
+                text-decoration: none;
+                color: $color-sec;
+                &:hover{
+                    color: $color-ppal;
+                }
+            }
+        }
+    }
+}
+
+.img-tours{
+    display: none;
+}
+
+.footer-home{
+    margin-top: 5rem;
+    width: 100vw;
+    position: absolute;
+    text-align: center;
+    background-color: $color-ppal;
+    .copy{
+        color: $color-sec;
+        font-size: 1.2rem;
+    }
+}
+
+ 
