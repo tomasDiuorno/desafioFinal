@@ -4,9 +4,21 @@
   padding: 0;
   box-sizing: border-box; }
 
-body {
-  background-color: #000000; }
+.main-tours .venta .venta-de-entradas .container-compra .ticket a {
+  color: #000000;
+  text-decoration: none;
+  background-color: greenyellow;
+  padding: 0.4rem;
+  font-family: 'Bebas Neue', cursive;
+  border-radius: 0.4rem;
+  font-size: 1.2rem; }
 
+/* estilos del body */
+body {
+  background-color: #000000;
+  height: 100vh; }
+
+/* index */
 /* estilos de nav */
 header {
   display: flex; }
@@ -29,17 +41,18 @@ header {
       header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item:hover {
         transform: scale(1.15); }
 
+/* estilos de main home */
 .main-home {
   display: grid;
   grid-template-areas: "video" "bbc";
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, 1fr);
-  height: 60vh;
   justify-items: center;
   text-align: center;
   background-image: url(../img/fondo.png);
   background-repeat: no-repeat;
-  background-position: center; }
+  background-position: center;
+  background-size: cover; }
   .main-home .video {
     grid-area: video;
     margin-top: 1rem; }
@@ -54,7 +67,7 @@ header {
     width: fit-content;
     border-radius: 2rem;
     padding: 1rem;
-    margin: 1.5rem;
+    margin: 1rem;
     border-style: groove;
     border-color: whitesmoke;
     overflow: auto; }
@@ -71,12 +84,350 @@ header {
 .img-tours {
   display: none; }
 
-.footer-home {
-  margin-top: 5rem;
+/* estilos de footer */
+footer {
+  padding: 1rem;
   width: 100vw;
   position: absolute;
   text-align: center;
   background-color: #000000; }
-  .footer-home .copy {
+  footer .copy {
     color: white;
     font-size: 1.2rem; }
+
+/*media screen 760px*/
+@media screen and (min-width: 760px) {
+  header .navbar .container-fluid .navbar-brand .logo {
+    width: 40%; }
+  header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item {
+    font-size: 1.8rem; }
+  .main-home {
+    height: 80vh; }
+    .main-home .video .yt-link {
+      width: 490px;
+      height: 280px; }
+    .main-home .bbc p {
+      font-size: 1.2rem; } }
+
+/*screen 1280px*/
+@media screen and (min-width: 1280px) {
+  header .navbar .container-fluid .navbar-brand .logo {
+    width: 50%; }
+  header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item {
+    font-size: 2.5rem; }
+  .main-home {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .main-home .video .yt-link {
+      width: 510px;
+      height: 310px; }
+    .main-home .bbc p {
+      font-size: 1.3rem; }
+  .img-tours {
+    display: block;
+    width: 100vw; }
+    .img-tours div {
+      display: flex;
+      justify-content: center; } }
+
+/* html miembros */
+.portada-miembros {
+  background-image: url(../img/miembrosportada.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 40vh;
+  position: relative;
+  display: none; }
+
+/* estilos de main miembros */
+.main-miembros {
+  display: flex;
+  flex-flow: wrap column;
+  align-content: center;
+  text-align: center;
+  background-color: #252525;
+  padding: 2rem; }
+  .main-miembros .title-miembros {
+    color: #D72323;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-align: center;
+    -webkit-text-stroke: 0.4px;
+    -webkit-text-stroke-color: #000000; }
+  .main-miembros p {
+    background-color: #414141;
+    max-width: 480px;
+    margin: 1rem;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.1rem;
+    padding: 0.5rem; }
+  .main-miembros .ex-miembros {
+    color: #D72323;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-align: center;
+    -webkit-text-stroke: 0.4px;
+    -webkit-text-stroke-color: #000000; }
+
+/*screen 760px*/
+@media screen and (min-width: 760px) {
+  .portada-miembros {
+    display: block; } }
+
+/*screen 1280px*/
+@media screen and (min-width: 1280px) {
+  .main-miembros .title-miembros {
+    font-size: 2rem; }
+  .main-miembros .corey-taylor {
+    display: flex;
+    margin: 1rem; }
+  .main-miembros .jim-root {
+    display: flex;
+    margin: 1rem;
+    flex-direction: row-reverse; }
+  .main-miembros .mick-thomson {
+    display: flex;
+    margin: 1rem; }
+  .main-miembros .shawn-crahan {
+    display: flex;
+    margin: 1rem;
+    flex-direction: row-reverse; }
+  .main-miembros .sid-wilson {
+    display: flex;
+    margin: 1rem; }
+  .main-miembros .craig-jones {
+    display: flex;
+    margin: 1rem;
+    flex-direction: row-reverse; }
+  .main-miembros .ex-miembros {
+    font-size: 2rem; }
+  .main-miembros .paul-gray {
+    display: flex;
+    margin: 1rem; }
+  .main-miembros .joey-jordison {
+    display: flex;
+    margin: 1rem;
+    flex-direction: row-reverse; }
+  .main-miembros .chris-fehn {
+    display: flex;
+    margin: 1rem; } }
+
+/* html discografia */
+.portada-discografia {
+  background-image: url(../img/portadadiscografia.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 40vh;
+  position: relative;
+  display: none; }
+
+.main-discografia {
+  background-color: #414141;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .main-discografia .title-discografia {
+    color: #D72323;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-align: center;
+    -webkit-text-stroke: 0.4px;
+    -webkit-text-stroke-color: #000000; }
+  .main-discografia .albums div {
+    margin-top: 1.2rem;
+    transition: all 300ms; }
+    .main-discografia .albums div:hover {
+      transform: scale(1.05); }
+
+/*screen 760px*/
+@media screen and (min-width: 760px) {
+  .portada-discografia {
+    display: block; }
+  .main-discografia .albums {
+    display: grid;
+    grid-template-areas: "we-are-not-your-kind the-gray-chapter" "all-hope-is-gone vol-tres" "iowa slipknot-album";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.5fr 0.5fr 0.5fr;
+    gap: 1rem; }
+    .main-discografia .albums .album-6 {
+      grid-area: we-are-not-your-kind; }
+    .main-discografia .albums .album-5 {
+      grid-area: the-gray-chapter; }
+    .main-discografia .albums .album-4 {
+      grid-area: all-hope-is-gone; }
+    .main-discografia .albums .album-3 {
+      grid-area: vol-tres; }
+    .main-discografia .albums .album-2 {
+      grid-area: iowa; }
+    .main-discografia .albums .album-1 {
+      grid-area: slipknot-album; } }
+
+/*screen 1280px*/
+@media screen and (min-width: 1280px) {
+  .main-discografia .title-discografia {
+    font-size: 2rem; }
+  .main-discografia .albums {
+    display: grid;
+    grid-template-areas: "we-are-not-your-kind the-gray-chapter all-hope-is-gone" "vol-tres iowa slipknot-album";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.5fr 0.5fr;
+    gap: 1rem; }
+    .main-discografia .albums .album-6 {
+      grid-area: we-are-not-your-kind; }
+    .main-discografia .albums .album-5 {
+      grid-area: the-gray-chapter; }
+    .main-discografia .albums .album-4 {
+      grid-area: all-hope-is-gone; }
+    .main-discografia .albums .album-3 {
+      grid-area: vol-tres; }
+    .main-discografia .albums .album-2 {
+      grid-area: iowa; }
+    .main-discografia .albums .album-1 {
+      grid-area: slipknot-album; } }
+
+/*html tours*/
+.tours-portada {
+  background-image: url(../img/portadatours.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 40vh;
+  position: relative;
+  display: none; }
+
+.main-tours {
+  height: 80vh;
+  padding: 2rem;
+  background-color: #252525; }
+  .main-tours .title-tours {
+    color: #D72323;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-align: center;
+    -webkit-text-stroke: 0.4px;
+    -webkit-text-stroke-color: #000000; }
+  .main-tours .venta .venta-de-entradas {
+    display: grid;
+    grid-template-areas: "container-fechas container-lugar container-compra";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    padding: 2rem;
+    background-color: black; }
+    .main-tours .venta .venta-de-entradas .container-fechas {
+      grid-area: container-fechas;
+      color: white;
+      padding-left: 1rem; }
+      .main-tours .venta .venta-de-entradas .container-fechas .fecha {
+        margin: 1rem;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 1.2rem; }
+    .main-tours .venta .venta-de-entradas .container-lugares {
+      grid-area: container-lugar;
+      text-align: center; }
+      .main-tours .venta .venta-de-entradas .container-lugares .lugar {
+        margin: 1rem;
+        color: white;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 1.2rem; }
+    .main-tours .venta .venta-de-entradas .container-compra {
+      grid-area: container-compra;
+      text-align: end; }
+      .main-tours .venta .venta-de-entradas .container-compra .ticket {
+        margin: 1rem; }
+
+@media screen and (min-width: 760px) {
+  .tours-portada {
+    display: block; }
+  .main-tours {
+    height: 80vh; }
+    .main-tours .title-tours {
+      font-size: 2rem; }
+    .main-tours .venta .venta-de-entradas .container-fechas .fecha {
+      font-size: 1.5rem; }
+    .main-tours .venta .venta-de-entradas .container-lugares .lugar {
+      font-size: 1.5rem; }
+    .main-tours .venta .venta-de-entradas .container-compra .ticket a {
+      font-size: 1.5rem; } }
+
+/* html contacto */
+.contacto-portada {
+  background-image: url(../img/portadacontacto.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 40vh;
+  position: relative;
+  display: none; }
+
+.main-contacto {
+  padding: 2rem;
+  background-color: #252525;
+  text-align: center;
+  height: 80vh; }
+  .main-contacto .title-contacto {
+    color: #D72323;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-align: center;
+    -webkit-text-stroke: 0.4px;
+    -webkit-text-stroke-color: #000000; }
+  .main-contacto .mail-contacto {
+    color: #ffffff;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.2rem;
+    margin: 3%; }
+  .main-contacto div .envianos-tu-msj {
+    color: #D72323;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-align: center;
+    -webkit-text-stroke: 0.4px;
+    -webkit-text-stroke-color: #000000; }
+  .main-contacto form {
+    margin: auto;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px; }
+    .main-contacto form input, .main-contacto form textarea {
+      width: 50%;
+      margin-bottom: 20px;
+      padding: 10px;
+      box-sizing: border-box; }
+
+/*screen 760px*/
+@media screen and (min-width: 760px) {
+  .contacto-portada {
+    display: block; }
+  .main-contacto .title-contacto {
+    font-size: 1.8rem; }
+  .main-contacto .mail-contacto {
+    font-size: 1.5rem; }
+  .main-contacto div .envianos-tu-msj {
+    font-size: 1.8rem; } }
+
+/*screen 1280px*/
+@media screen and (min-width: 1280px) {
+  .main-contacto .title-contacto {
+    font-size: 2rem; }
+  .main-contacto .mail-contacto {
+    font-size: 1.8rem; }
+  .main-contacto div .envianos-tu-msj {
+    font-size: 2rem; } }

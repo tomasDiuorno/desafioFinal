@@ -1,0 +1,38 @@
+//
+
+@mixin portadas {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 40vh;
+    position: relative;
+    display: none;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin miembros {
+    display: flex;
+    margin: 1rem;
+}
+
+@mixin miembrosDos {
+    display: flex;
+    margin: 1rem;
+    flex-direction: row-reverse;
+}
+
+@mixin subtitulos {
+    color: #D72323;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-align: center;
+    -webkit-text-stroke: 0.4px;
+    -webkit-text-stroke-color: #000000;
+}
