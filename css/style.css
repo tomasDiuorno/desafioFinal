@@ -13,6 +13,18 @@
   border-radius: 0.4rem;
   font-size: 1.2rem; }
 
+.albm .alb-descrip {
+  background-color: #252525;
+  width: 400px;
+  border-radius: 0.5rem;
+  border-style: solid;
+  color: #ffffff;
+  padding: 1rem;
+  margin: 0.5rem;
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.2rem; }
+
 /* estilos del body */
 body {
   background-color: #000000;
@@ -294,6 +306,76 @@ footer {
       grid-area: iowa; }
     .main-discografia .albums .album-1 {
       grid-area: slipknot-album; } }
+
+/* albums */
+.portada-discografia-albums {
+  background-image: url(../img/portadadiscografia.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 40vh;
+  position: relative;
+  display: none; }
+
+.albm {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #414141; }
+  .albm .redes {
+    display: none; }
+  .albm .spotify {
+    height: 380px;
+    width: 100%; }
+
+/* screens 760px */
+@media screen and (min-width: 760px) {
+  .portada-discografia-albums {
+    display: block; }
+  .albm {
+    display: grid;
+    grid-template-areas: "img-album descripcion" "spotify spotify";
+    grid-template-columns: 1fr, 2fr;
+    grid-template-rows: 1fr, 2fr;
+    justify-content: center;
+    gap: 1rem; }
+    .albm .img-albums {
+      grid-area: img-album; }
+    .albm .alb-descrip {
+      grid-area: descripcion;
+      height: 300px; }
+    .albm .spotify-container {
+      grid-area: spotify;
+      display: flex;
+      justify-content: center; }
+      .albm .spotify-container .spotify {
+        width: 750px; } }
+
+/* screens 1280px*/
+@media screen and (min-width: 1280px) {
+  .albm {
+    display: grid;
+    grid-template-areas: "img-album descripcion" "redes spotify"; }
+    .albm .img-albums {
+      align-self: start; }
+    .albm .alb-descrip {
+      width: auto; }
+    .albm .redes {
+      grid-area: redes;
+      display: block;
+      width: 300px; }
+      .albm .redes a {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .albm .redes a .instagram {
+          width: 30%; }
+        .albm .redes a .facebook {
+          width: 30%; }
+        .albm .redes a .twitter {
+          width: 30%; } }
 
 /*html tours*/
 .tours-portada {

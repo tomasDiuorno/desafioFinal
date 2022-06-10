@@ -5,41 +5,90 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-     <!-- fuentes -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!-- palabras claves -->
+    <meta name="keywords" content="SLIPKNOT, ALBUMS, DISCOGRAFIA, WE ARE NOT YOUR KIND, THE GRAY CHAPTER, ALL HOPE IS GONE, IOWA, VOL 3">
+
+    <!-- descripcion -->
+    <meta name="description" content="Escucha y conoce la discografia completa de la banda, desde su primer album hasta el ultimo.">
+
+    <!-- bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&display=swap" rel="stylesheet">
  
-     <!--link css-->
-     <link rel="stylesheet" href="../css/style.css">
+    <!--link css-->
+    <link rel="stylesheet" href="../css/style.css">
     <title>Iowa</title>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <h1> <a href="../index.html"><img src="../img/logo.png" height="100" alt="Logo"></a> </h1>
-        </div>
-        <nav>
-            <ul>
-                <li>
-                    <a href="discografia.html">DISCOGRAFIA</a>
-                </li>
-                <li>
-                    <a href="../index.html">HOME</a>
-                </li>
-                <li>
-                    <a href="miembros.html">MIEMBROS</a>
-                </li>
-                <li>
-                    <a href="tours.html">TOURS</a>
-                </li>
-                <li>
-                    <a href="contactanos.html">CONTACTANOS</a>
-                </li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html"><img class="logo" src="../img/logo.png" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="miembros.html">Miembros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="discografia.html">Discografia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="tours.html">Tours</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contactanos.html">Contactanos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
     <div class="portada-discografia"></div>
+
+    <main class="albm">
+        <div class="img-albums">
+            <img src="../img/iowa.png" alt="Portada del disco Iowa">
+        </div>
+        <div class="alb-descrip">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt necessitatibus similique praesentium porro sequi</p>
+            <p>
+            explicabo obcaecati iste at illum! Porro numquam veniam qui totam ab ex commodi rem harum necessitatibus!
+            </p>
+        </div>
+        <div class="redes">
+            <a href="https://www.instagram.com/slipknot/" target="_blank"><img class="instagram" src="../img/instalogo.png" alt="logo de instagram"></a>
+            <a href="https://www.facebook.com/slipknot" target="_blank"><img class="facebook" src="../img/facebooklogo.png" alt="logo de facebook"></a>
+            <a href="https://twitter.com/slipknot"><img class="twitter" src="../img/twitterlogo.png" alt="logo de twitter"></a>
+        </div>
+        <div class="spotify-container">
+            <iframe class="spotify" style="border-radius:12px" src="https://open.spotify.com/embed/album/5Zs0mNCTs73CqPKbZPWFX9?utm_source=generator" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
+    </main>
+
+    <footer>
+        <h2 class="copy">
+            © 2022 Tomas Diuorno. Todos los derechos reservados
+        </h2>
+    </footer>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
 </body>
 </html>

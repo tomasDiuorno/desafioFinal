@@ -36,3 +36,11 @@
     -webkit-text-stroke: 0.4px;
     -webkit-text-stroke-color: #000000;
 }
+
+@mixin albums{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #414141;
+}

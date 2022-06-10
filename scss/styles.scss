@@ -398,7 +398,95 @@ footer{
     }  
 }
 
+/* albums */
 
+.portada-discografia-albums{
+    background-image: url(../img/portadadiscografia.png);
+    @include portadas;
+}
+
+.albm{
+    @include albums;
+    .alb-descrip{
+        @extend %cajas;
+    }
+    .redes{
+        display: none;
+    }
+    .spotify{
+        height: 380px;
+        width: 100%;
+    }
+}
+
+/* screens 760px */
+@media screen and (min-width: 760px) {
+    
+    .portada-discografia-albums{
+        display: block;
+    }
+
+    .albm{
+        display: grid;
+        grid-template-areas: "img-album descripcion"
+                             "spotify spotify";
+        grid-template-columns: 1fr, 2fr;
+        grid-template-rows: 1fr, 2fr;
+        justify-content: center;
+        gap: 1rem;
+        .img-albums{
+            grid-area: img-album;
+        }
+        .alb-descrip{
+            grid-area: descripcion;
+            height: 300px;
+        }
+        .spotify-container{
+            grid-area: spotify;
+            display: flex;
+            justify-content: center;
+            .spotify{
+                width: 750px;
+            }
+        }
+    }
+}
+
+/* screens 1280px*/
+
+@media screen and (min-width: 1280px) {
+    .albm{
+        display: grid;
+        grid-template-areas: "img-album descripcion"
+                             "redes spotify";
+        .img-albums{
+            align-self: start;
+        }
+        .alb-descrip{
+            width: auto;
+        }
+        .redes{
+            grid-area: redes;
+            display: block;            
+            width: 300px;       
+            a{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .instagram{
+                    width: 30%;
+                }
+                .facebook{
+                    width: 30%;
+                }
+                .twitter{
+                    width: 30%;
+                }
+            }
+        }
+    }
+    
+}
 /*html tours*/
 
 .tours-portada {
