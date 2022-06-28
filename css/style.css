@@ -260,7 +260,9 @@ footer {
     .main-miembros .miembro-dos img {
       width: 100%; }
     .main-miembros .miembro-dos .bio {
-      font-size: 1.2rem; } }
+      font-size: 1.2rem; }
+  .main-miembros .ex-miembros {
+    font-size: 2rem; } }
 
 /* html discografia */
 .portada-discografia {
