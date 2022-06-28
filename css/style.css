@@ -423,12 +423,17 @@ footer {
         font-size: 1.2rem; }
     .albm .redes {
       grid-area: redes;
-      display: block; }
+      display: block;
+      background-color: #252525;
+      border: solid white;
+      border-radius: 1rem;
+      max-width: 300px; }
       .albm .redes a {
         display: grid;
         width: fit-content;
         justify-items: center;
-        padding: 1rem; }
+        padding: 1rem;
+        transition: all 600ms; }
         .albm .redes a .facebook {
           min-width: 100px;
           max-width: 20%; }
@@ -438,6 +443,8 @@ footer {
         .albm .redes a .twitter {
           min-width: 100px;
           max-width: 20%; }
+        .albm .redes a:hover {
+          transform: scale(1.15); }
     .albm .spotify-container {
       justify-self: left;
       grid-area: spotify;

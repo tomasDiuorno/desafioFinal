@@ -512,6 +512,7 @@ footer{
         .img-albums{
             grid-area: img-album;
             width: 300px;
+            
         }
         .alb-descrip{
             grid-area: descripcion;
@@ -528,6 +529,11 @@ footer{
         .redes{
             grid-area: redes;
             display: block;
+            background-color: #252525;
+            border: solid white;
+            border-radius: 1rem;
+            max-width: 300px;
+            
             a{
                 display: grid;
                 width: fit-content;
@@ -544,6 +550,10 @@ footer{
                 .twitter{
                     min-width: 100px;
                     max-width: 20%;
+                }
+                transition: all 600ms;
+                &:hover{
+                    transform: scale(1.15);
                 }
             }
         }
