@@ -19,18 +19,32 @@
 @mixin miembros {
     display: flex;
     margin: 1rem;
+    height: 400px;
+}
+
+@mixin bio {
+    background-color: #414141;
+    max-width: 700px;
+    width: fit-content;
+    max-height: fit-content;
+    margin: 0.5rem;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.1rem;
+    padding: 0.5rem;
 }
 
 @mixin miembrosDos {
     display: flex;
     margin: 1rem;
     flex-direction: row-reverse;
+    height: 400px;
 }
 
 @mixin subtitulos {
     color: #D72323;
     font-family: 'Bebas Neue', cursive;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-decoration: underline;
     text-align: center;
     -webkit-text-stroke: 0.4px;

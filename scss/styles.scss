@@ -74,8 +74,8 @@ header{
         grid-area: video;
         margin-top: 1rem;
         .yt-link{
-            width: 420px;
-            height: 210px;
+            width: 100%;
+            height: 100%;
         }
     }
     .bbc{
@@ -225,15 +225,32 @@ footer{
     padding: $medida-ppal;
     .title-miembros{
         @include subtitulos;
-    }  
-    p{
-        background-color: #414141;
-        max-width: 480px;
-        margin: 1rem;
-        color: white;
-        font-family: 'Bebas Neue', cursive;
-        font-size: 1.1rem;
-        padding: 0.5rem;
+    }
+    
+    .miembro{
+        img{
+            width: 60%;
+            margin: 1rem;
+        }
+        .bio{
+            @include bio;
+            span{
+                color: #ff8181;
+                
+            }
+        }
+    }
+    .miembro-dos{
+        img{
+            max-width: 60%;
+            margin: 1rem;
+        }
+        .bio{
+            @include bio;
+            span{
+                color: #ff8181;
+            }
+        }
     }
     .ex-miembros{
         @include subtitulos;
@@ -245,6 +262,33 @@ footer{
     .portada-miembros{
         display: block;
     }
+    .main-miembros{
+        .title-miembros{
+            font-size: $medida-terc;
+        }
+        .miembro{
+            img{
+                max-width: 400px;
+            }
+        }
+        .miembro-dos{
+            img{
+                max-width: 400px;
+            }
+        }
+    }
+}
+
+/*screen 1024*/
+@media screen and (min-width: 1024px) {
+    .main-miembros{
+        .miembro{
+            @include miembros;
+        }
+        .miembro-dos{
+            @include miembrosDos;
+        }
+    }
 }
 
 /*screen 1280px*/
@@ -253,35 +297,23 @@ footer{
         .title-miembros{
             font-size: $medida-ppal;
         }
-        .corey-taylor{
+        .miembro{
             @include miembros;
+            img{
+                width: 100%;
+            }
+            .bio{
+                font-size: $medida-cuar;
+            }
         }
-        .jim-root{
+        .miembro-dos{
             @include miembrosDos;
-        }
-        .mick-thomson{
-            @include miembros;
-        }   
-        .shawn-crahan{
-            @include miembrosDos;
-        }    
-        .sid-wilson{
-            @include miembros;
-        }    
-        .craig-jones{
-            @include miembrosDos;
-        }    
-        .ex-miembros{
-            font-size: $medida-ppal;
-        }        
-        .paul-gray{
-            @include miembros;
-        }
-        .joey-jordison{
-            @include miembrosDos;
-        }
-        .chris-fehn{
-            @include miembros;
+            img{
+                width: 100%;
+            }
+            .bio{
+                font-size: $medida-cuar;
+            }
         }
     }
 }
@@ -398,7 +430,7 @@ footer{
     }  
 }
 
-/* albums */
+/* albums 1 al 6 */
 
 .portada-discografia-albums{
     background-image: url(../img/portadadiscografia.png);
@@ -407,8 +439,21 @@ footer{
 
 .albm{
     @include albums;
+    .img-albums{
+        display: flex;
+        justify-content: center;
+        img{
+            width: 100%;
+        }
+    }
     .alb-descrip{
         @extend %cajas;
+        .album-title{
+            @include subtitulos;
+        }
+        p{
+            font-size: 0.8rem;
+        }
     }
     .redes{
         display: none;
@@ -428,9 +473,9 @@ footer{
 
     .albm{
         display: grid;
-        grid-template-areas: "img-album descripcion"
-                             "spotify spotify";
-        grid-template-columns: 1fr, 2fr;
+        grid-template-areas: "img-album descripcion redes"
+                             "spotify spotify redes";
+        grid-template-columns: 3fr, 3fr, 1fr;
         grid-template-rows: 1fr, 2fr;
         justify-content: center;
         gap: 1rem;
@@ -439,139 +484,179 @@ footer{
         }
         .alb-descrip{
             grid-area: descripcion;
-            height: 300px;
         }
         .spotify-container{
             grid-area: spotify;
             display: flex;
             justify-content: center;
             .spotify{
-                width: 750px;
+                width: 100%;
             }
         }
     }
 }
 
-/* screens 1280px*/
+/* screens 1080px*/
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1080px) {
     .albm{
         display: grid;
         grid-template-areas: "img-album descripcion"
                              "redes spotify";
+        grid-template-columns: 0.5fr 1fr; 
+        grid-template-rows: repeat(2, 1fr);
+        justify-items: center;
         .img-albums{
-            align-self: start;
+            grid-area: img-album;
+            width: 300px;
         }
         .alb-descrip{
-            width: auto;
+            grid-area: descripcion;
+            justify-self: left;
+            max-width: 750px;
+            width: fit-content;
+            .album-title{
+                font-size: $medida-secun;
+            }
+            p{
+                font-size: 1.2rem;
+            }
         }
         .redes{
             grid-area: redes;
-            display: block;            
-            width: 300px;       
+            display: block;
             a{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                .instagram{
-                    width: 30%;
-                }
+                display: grid;
+                width: fit-content;
+                justify-items: center;
+                padding: 1rem;
                 .facebook{
-                    width: 30%;
+                    min-width: 100px;
+                    max-width: 20%;
+                }
+                .instagram{
+                    min-width: 100px;
+                    max-width: 20%;
                 }
                 .twitter{
-                    width: 30%;
+                    min-width: 100px;
+                    max-width: 20%;
                 }
             }
         }
+        .spotify-container{
+            justify-self: left;
+            grid-area: spotify;
+            width: fit-content;
+            .spotify{
+                width: 750px;
+            }
+        }
     }
+ }
     
-}
+
+
 /*html tours*/
 
-.tours-portada {
-    background-image: url(../img/portadatours.jpg);
-    @include portadas;
-    
-}
-
 .main-tours{
-    height: 80vh;
-    padding: $medida-ppal;
-    background-color: #252525;
+    background-color: #414141;
+    padding: 1rem;
     .title-tours{
         @include subtitulos;
     }
     .venta{
-        .venta-de-entradas{
-            display: grid;
-            grid-template-areas: "container-fechas container-lugar container-compra";
-            grid-template-columns:repeat(3, 1fr);
-            grid-template-rows: 1fr;
-            padding: 2rem;
-            background-color: black;
-            .container-fechas{
-                grid-area: container-fechas;
-                color: white;
-                padding-left: 1rem;
+        background-color: $color-ppal;
+        padding: 1rem;
+        .container-compra{
+            display: flex;
+            flex-direction: column;
+            background-color: #414141;
+            .ticket{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: $color-ppal;
+                margin: 1rem;
+                padding: 1rem;
+                border: solid 0.2rem $color-sec;
+                border-radius: 0.5rem;
                 .fecha{
-                    margin: 1rem;
-                    font-family: 'Bebas Neue', cursive;
-                    font-size: 1.2rem;
+                    @extend %tours;
+                    text-align: center
                 }
-            }
-            .container-lugares{
-                grid-area: container-lugar;
-                text-align: center;
                 .lugar{
-                    margin: 1rem;
-                    color: white;
-                    font-family: 'Bebas Neue', cursive;
-                    font-size: 1.2rem;
+                    @extend %tours;
+                    text-align: center
                 }
-            }
-            .container-compra{
-                grid-area: container-compra;
-                text-align: end;
-                .ticket{
-                    margin: 1rem;
-                    a {
-                        @extend %botones;
+                .buy-button{
+                    @extend %botones;
+                    transition: all 300ms;
+                    &:hover{
+                        transform: scale(1.15);
                     }
                 }
             }
-        }    
+        }
     }
 }
 
-@media screen and (min-width: 760px) {
-    
-    .tours-portada{
-        display: block;
-    }
-
+/* screens 520px */
+@media screen and (min-width: 520px){
     .main-tours{
-        height: 80vh;
+        .venta{
+            .container-compra{
+                .ticket{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+}
+
+/* screens 760px */
+@media screen and (min-width: 760px){
+    .main-tours{
+        .title-tours{
+            font-size: $medida-terc;
+        }
+        .venta{
+            .container-compra{
+                .ticket{
+                    .fecha{
+                        font-size: $medida-cuar;
+                    }
+                    .lugar{
+                        font-size: $medida-cuar;
+                    }
+                    .buy-button{
+                        font-size: $medida-cuar;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* screens 1024px */
+@media screen and (min-width: 1024px){
+    .main-tours{
         .title-tours{
             font-size: $medida-ppal;
         }
         .venta{
-            .venta-de-entradas{
-                .container-fechas{
+            .container-compra{
+                .ticket{
                     .fecha{
                         font-size: $medida-secun;
                     }
-                }
-                .container-lugares{
-                    .lugar{        
-                       font-size: $medida-secun;                    
+                    .lugar{
+                        font-size: $medida-secun;
                     }
-                }
-                .container-compra{
-                    .ticket{
-                        a{
-                            font-size: $medida-secun;
-                        }
+                    .buy-button{
+                        font-size: $medida-secun;
                     }
                 }
             }
@@ -590,20 +675,18 @@ footer{
     padding: $medida-ppal;
     background-color: #252525;
     text-align: center;
-    height: 80vh;
     .title-contacto {
         @include subtitulos;
     }
     .mail-contacto {
-        color: #ffffff;
-        font-family: 'Bebas Neue', cursive;
-        font-size: 1.2rem;
-        margin: 3%;
-    }
-    div{
-        .envianos-tu-msj {
-            @include subtitulos;
+        p{
+            color: #ffffff;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1.2rem;
         }
+    }
+    .envianos-tu-msj {
+        @include subtitulos;
     }
     form {
         margin: auto;
@@ -633,12 +716,12 @@ footer{
             font-size: $medida-terc;               
         }
         .mail-contacto {
-            font-size: $medida-secun;
-        }
-        div{
-            .envianos-tu-msj {
-                font-size: $medida-terc;            
+            p{
+                font-size: $medida-secun;
             }
+        }
+        .envianos-tu-msj {
+            font-size: $medida-terc;            
         }
     }
 }
@@ -650,7 +733,9 @@ footer{
             font-size: $medida-ppal;               
         }
         .mail-contacto {
-            font-size: $medida-terc;
+            p{
+                font-size: $medida-terc;
+            }    
         }
         div{
             .envianos-tu-msj {

@@ -4,18 +4,21 @@
   padding: 0;
   box-sizing: border-box; }
 
-.main-tours .venta .venta-de-entradas .container-compra .ticket a {
+.main-tours .venta .container-compra .ticket .buy-button {
   color: #000000;
   text-decoration: none;
   background-color: greenyellow;
   padding: 0.4rem;
+  height: fit-content;
   font-family: 'Bebas Neue', cursive;
   border-radius: 0.4rem;
   font-size: 1.2rem; }
 
 .albm .alb-descrip {
   background-color: #252525;
-  width: 400px;
+  width: fit-content;
+  max-width: 400px;
+  height: fit-content;
   border-radius: 0.5rem;
   border-style: solid;
   color: #ffffff;
@@ -24,6 +27,11 @@
   text-align: center;
   font-family: 'Bebas Neue', cursive;
   font-size: 1.2rem; }
+
+.main-tours .venta .container-compra .ticket .fecha, .main-tours .venta .container-compra .ticket .lugar {
+  color: #ffffff;
+  font-family: 'Bebas Neue', cursive;
+  padding: 0.5rem; }
 
 /* estilos del body */
 body {
@@ -69,8 +77,8 @@ header {
     grid-area: video;
     margin-top: 1rem; }
     .main-home .video .yt-link {
-      width: 420px;
-      height: 210px; }
+      width: 100%;
+      height: 100%; }
   .main-home .bbc {
     grid-area: bbc;
     position: relative;
@@ -165,23 +173,45 @@ footer {
   .main-miembros .title-miembros {
     color: #D72323;
     font-family: 'Bebas Neue', cursive;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-decoration: underline;
     text-align: center;
     -webkit-text-stroke: 0.4px;
     -webkit-text-stroke-color: #000000; }
-  .main-miembros p {
+  .main-miembros .miembro img {
+    width: 60%;
+    margin: 1rem; }
+  .main-miembros .miembro .bio {
     background-color: #414141;
-    max-width: 480px;
-    margin: 1rem;
+    max-width: 700px;
+    width: fit-content;
+    max-height: fit-content;
+    margin: 0.5rem;
     color: white;
     font-family: 'Bebas Neue', cursive;
     font-size: 1.1rem;
     padding: 0.5rem; }
+    .main-miembros .miembro .bio span {
+      color: #ff8181; }
+  .main-miembros .miembro-dos img {
+    max-width: 60%;
+    margin: 1rem; }
+  .main-miembros .miembro-dos .bio {
+    background-color: #414141;
+    max-width: 700px;
+    width: fit-content;
+    max-height: fit-content;
+    margin: 0.5rem;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.1rem;
+    padding: 0.5rem; }
+    .main-miembros .miembro-dos .bio span {
+      color: #ff8181; }
   .main-miembros .ex-miembros {
     color: #D72323;
     font-family: 'Bebas Neue', cursive;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-decoration: underline;
     text-align: center;
     -webkit-text-stroke: 0.4px;
@@ -190,45 +220,47 @@ footer {
 /*screen 760px*/
 @media screen and (min-width: 760px) {
   .portada-miembros {
-    display: block; } }
+    display: block; }
+  .main-miembros .title-miembros {
+    font-size: 1.8rem; }
+  .main-miembros .miembro img {
+    max-width: 400px; }
+  .main-miembros .miembro-dos img {
+    max-width: 400px; } }
+
+/*screen 1024*/
+@media screen and (min-width: 1024px) {
+  .main-miembros .miembro {
+    display: flex;
+    margin: 1rem;
+    height: 400px; }
+  .main-miembros .miembro-dos {
+    display: flex;
+    margin: 1rem;
+    flex-direction: row-reverse;
+    height: 400px; } }
 
 /*screen 1280px*/
 @media screen and (min-width: 1280px) {
   .main-miembros .title-miembros {
     font-size: 2rem; }
-  .main-miembros .corey-taylor {
-    display: flex;
-    margin: 1rem; }
-  .main-miembros .jim-root {
+  .main-miembros .miembro {
     display: flex;
     margin: 1rem;
-    flex-direction: row-reverse; }
-  .main-miembros .mick-thomson {
-    display: flex;
-    margin: 1rem; }
-  .main-miembros .shawn-crahan {
-    display: flex;
-    margin: 1rem;
-    flex-direction: row-reverse; }
-  .main-miembros .sid-wilson {
-    display: flex;
-    margin: 1rem; }
-  .main-miembros .craig-jones {
+    height: 400px; }
+    .main-miembros .miembro img {
+      width: 100%; }
+    .main-miembros .miembro .bio {
+      font-size: 1.2rem; }
+  .main-miembros .miembro-dos {
     display: flex;
     margin: 1rem;
-    flex-direction: row-reverse; }
-  .main-miembros .ex-miembros {
-    font-size: 2rem; }
-  .main-miembros .paul-gray {
-    display: flex;
-    margin: 1rem; }
-  .main-miembros .joey-jordison {
-    display: flex;
-    margin: 1rem;
-    flex-direction: row-reverse; }
-  .main-miembros .chris-fehn {
-    display: flex;
-    margin: 1rem; } }
+    flex-direction: row-reverse;
+    height: 400px; }
+    .main-miembros .miembro-dos img {
+      width: 100%; }
+    .main-miembros .miembro-dos .bio {
+      font-size: 1.2rem; } }
 
 /* html discografia */
 .portada-discografia {
@@ -250,7 +282,7 @@ footer {
   .main-discografia .title-discografia {
     color: #D72323;
     font-family: 'Bebas Neue', cursive;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-decoration: underline;
     text-align: center;
     -webkit-text-stroke: 0.4px;
@@ -307,7 +339,7 @@ footer {
     .main-discografia .albums .album-1 {
       grid-area: slipknot-album; } }
 
-/* albums */
+/* albums 1 al 6 */
 .portada-discografia-albums {
   background-image: url(../img/portadadiscografia.png);
   background-attachment: fixed;
@@ -324,6 +356,21 @@ footer {
   flex-direction: column;
   align-items: center;
   background-color: #414141; }
+  .albm .img-albums {
+    display: flex;
+    justify-content: center; }
+    .albm .img-albums img {
+      width: 100%; }
+  .albm .alb-descrip .album-title {
+    color: #D72323;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.3rem;
+    text-decoration: underline;
+    text-align: center;
+    -webkit-text-stroke: 0.4px;
+    -webkit-text-stroke-color: #000000; }
+  .albm .alb-descrip p {
+    font-size: 0.8rem; }
   .albm .redes {
     display: none; }
   .albm .spotify {
@@ -336,112 +383,131 @@ footer {
     display: block; }
   .albm {
     display: grid;
-    grid-template-areas: "img-album descripcion" "spotify spotify";
-    grid-template-columns: 1fr, 2fr;
+    grid-template-areas: "img-album descripcion redes" "spotify spotify redes";
+    grid-template-columns: 3fr, 3fr, 1fr;
     grid-template-rows: 1fr, 2fr;
     justify-content: center;
     gap: 1rem; }
     .albm .img-albums {
       grid-area: img-album; }
     .albm .alb-descrip {
-      grid-area: descripcion;
-      height: 300px; }
+      grid-area: descripcion; }
     .albm .spotify-container {
       grid-area: spotify;
       display: flex;
       justify-content: center; }
       .albm .spotify-container .spotify {
-        width: 750px; } }
+        width: 100%; } }
 
-/* screens 1280px*/
-@media screen and (min-width: 1280px) {
+/* screens 1080px*/
+@media screen and (min-width: 1080px) {
   .albm {
     display: grid;
-    grid-template-areas: "img-album descripcion" "redes spotify"; }
+    grid-template-areas: "img-album descripcion" "redes spotify";
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center; }
     .albm .img-albums {
-      align-self: start; }
+      grid-area: img-album;
+      width: 300px; }
     .albm .alb-descrip {
-      width: auto; }
+      grid-area: descripcion;
+      justify-self: left;
+      max-width: 750px;
+      width: fit-content; }
+      .albm .alb-descrip .album-title {
+        font-size: 1.5rem; }
+      .albm .alb-descrip p {
+        font-size: 1.2rem; }
     .albm .redes {
       grid-area: redes;
-      display: block;
-      width: 300px; }
+      display: block; }
       .albm .redes a {
-        display: flex;
-        flex-direction: column;
-        align-items: center; }
-        .albm .redes a .instagram {
-          width: 30%; }
+        display: grid;
+        width: fit-content;
+        justify-items: center;
+        padding: 1rem; }
         .albm .redes a .facebook {
-          width: 30%; }
+          min-width: 100px;
+          max-width: 20%; }
+        .albm .redes a .instagram {
+          min-width: 100px;
+          max-width: 20%; }
         .albm .redes a .twitter {
-          width: 30%; } }
+          min-width: 100px;
+          max-width: 20%; }
+    .albm .spotify-container {
+      justify-self: left;
+      grid-area: spotify;
+      width: fit-content; }
+      .albm .spotify-container .spotify {
+        width: 750px; } }
 
 /*html tours*/
-.tours-portada {
-  background-image: url(../img/portadatours.jpg);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 40vh;
-  position: relative;
-  display: none; }
-
 .main-tours {
-  height: 80vh;
-  padding: 2rem;
-  background-color: #252525; }
+  background-color: #414141;
+  padding: 1rem; }
   .main-tours .title-tours {
     color: #D72323;
     font-family: 'Bebas Neue', cursive;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-decoration: underline;
     text-align: center;
     -webkit-text-stroke: 0.4px;
     -webkit-text-stroke-color: #000000; }
-  .main-tours .venta .venta-de-entradas {
-    display: grid;
-    grid-template-areas: "container-fechas container-lugar container-compra";
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    padding: 2rem;
-    background-color: black; }
-    .main-tours .venta .venta-de-entradas .container-fechas {
-      grid-area: container-fechas;
-      color: white;
-      padding-left: 1rem; }
-      .main-tours .venta .venta-de-entradas .container-fechas .fecha {
+  .main-tours .venta {
+    background-color: #000000;
+    padding: 1rem; }
+    .main-tours .venta .container-compra {
+      display: flex;
+      flex-direction: column;
+      background-color: #414141; }
+      .main-tours .venta .container-compra .ticket {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #000000;
         margin: 1rem;
-        font-family: 'Bebas Neue', cursive;
-        font-size: 1.2rem; }
-    .main-tours .venta .venta-de-entradas .container-lugares {
-      grid-area: container-lugar;
-      text-align: center; }
-      .main-tours .venta .venta-de-entradas .container-lugares .lugar {
-        margin: 1rem;
-        color: white;
-        font-family: 'Bebas Neue', cursive;
-        font-size: 1.2rem; }
-    .main-tours .venta .venta-de-entradas .container-compra {
-      grid-area: container-compra;
-      text-align: end; }
-      .main-tours .venta .venta-de-entradas .container-compra .ticket {
-        margin: 1rem; }
+        padding: 1rem;
+        border: solid 0.2rem white;
+        border-radius: 0.5rem; }
+        .main-tours .venta .container-compra .ticket .fecha {
+          text-align: center; }
+        .main-tours .venta .container-compra .ticket .lugar {
+          text-align: center; }
+        .main-tours .venta .container-compra .ticket .buy-button {
+          transition: all 300ms; }
+          .main-tours .venta .container-compra .ticket .buy-button:hover {
+            transform: scale(1.15); }
 
+/* screens 520px */
+@media screen and (min-width: 520px) {
+  .main-tours .venta .container-compra .ticket {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; } }
+
+/* screens 760px */
 @media screen and (min-width: 760px) {
-  .tours-portada {
-    display: block; }
-  .main-tours {
-    height: 80vh; }
-    .main-tours .title-tours {
-      font-size: 2rem; }
-    .main-tours .venta .venta-de-entradas .container-fechas .fecha {
-      font-size: 1.5rem; }
-    .main-tours .venta .venta-de-entradas .container-lugares .lugar {
-      font-size: 1.5rem; }
-    .main-tours .venta .venta-de-entradas .container-compra .ticket a {
-      font-size: 1.5rem; } }
+  .main-tours .title-tours {
+    font-size: 1.8rem; }
+  .main-tours .venta .container-compra .ticket .fecha {
+    font-size: 1.2rem; }
+  .main-tours .venta .container-compra .ticket .lugar {
+    font-size: 1.2rem; }
+  .main-tours .venta .container-compra .ticket .buy-button {
+    font-size: 1.2rem; } }
+
+/* screens 1024px */
+@media screen and (min-width: 1024px) {
+  .main-tours .title-tours {
+    font-size: 2rem; }
+  .main-tours .venta .container-compra .ticket .fecha {
+    font-size: 1.5rem; }
+  .main-tours .venta .container-compra .ticket .lugar {
+    font-size: 1.5rem; }
+  .main-tours .venta .container-compra .ticket .buy-button {
+    font-size: 1.5rem; } }
 
 /* html contacto */
 .contacto-portada {
@@ -457,25 +523,23 @@ footer {
 .main-contacto {
   padding: 2rem;
   background-color: #252525;
-  text-align: center;
-  height: 80vh; }
+  text-align: center; }
   .main-contacto .title-contacto {
     color: #D72323;
     font-family: 'Bebas Neue', cursive;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-decoration: underline;
     text-align: center;
     -webkit-text-stroke: 0.4px;
     -webkit-text-stroke-color: #000000; }
-  .main-contacto .mail-contacto {
+  .main-contacto .mail-contacto p {
     color: #ffffff;
     font-family: 'Bebas Neue', cursive;
-    font-size: 1.2rem;
-    margin: 3%; }
-  .main-contacto div .envianos-tu-msj {
+    font-size: 1.2rem; }
+  .main-contacto .envianos-tu-msj {
     color: #D72323;
     font-family: 'Bebas Neue', cursive;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-decoration: underline;
     text-align: center;
     -webkit-text-stroke: 0.4px;
@@ -500,16 +564,16 @@ footer {
     display: block; }
   .main-contacto .title-contacto {
     font-size: 1.8rem; }
-  .main-contacto .mail-contacto {
+  .main-contacto .mail-contacto p {
     font-size: 1.5rem; }
-  .main-contacto div .envianos-tu-msj {
+  .main-contacto .envianos-tu-msj {
     font-size: 1.8rem; } }
 
 /*screen 1280px*/
 @media screen and (min-width: 1280px) {
   .main-contacto .title-contacto {
     font-size: 2rem; }
-  .main-contacto .mail-contacto {
+  .main-contacto .mail-contacto p {
     font-size: 1.8rem; }
   .main-contacto div .envianos-tu-msj {
     font-size: 2rem; } }

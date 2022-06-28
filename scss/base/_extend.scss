@@ -4,6 +4,7 @@
     text-decoration: none;
     background-color: greenyellow;
     padding: 0.4rem;
+    height: fit-content;
     font-family: 'Bebas Neue', cursive;
     border-radius: 0.4rem;
     font-size: 1.2rem;
@@ -11,7 +12,9 @@
 
 %cajas{
     background-color: #252525;
-    width: 400px;
+    width: fit-content;
+    max-width: 400px;
+    height: fit-content;
     border-radius: 0.5rem;
     border-style: solid;
     color: #ffffff;
@@ -20,4 +23,10 @@
     text-align: center;
     font-family:'Bebas Neue', cursive;
     font-size: 1.2rem;
+}
+
+%tours{
+    color: #ffffff;
+    font-family:'Bebas Neue', cursive;
+    padding: 0.5rem;
 }
