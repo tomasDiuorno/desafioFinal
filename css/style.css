@@ -40,8 +40,25 @@ body {
 
 /* index */
 /* estilos de nav */
-header {
+header .navbar .container-fluid {
   display: flex; }
+  header .navbar .container-fluid .redes {
+    display: flex;
+    width: fit-content; }
+    header .navbar .container-fluid .redes .link-redes {
+      display: grid;
+      width: 40px;
+      justify-items: center;
+      padding: 10px;
+      transition: all 600ms; }
+      header .navbar .container-fluid .redes .link-redes .facebook-dos {
+        width: 100%; }
+      header .navbar .container-fluid .redes .link-redes .instagram-dos {
+        width: 100%; }
+      header .navbar .container-fluid .redes .link-redes .twitter-dos {
+        width: 100%; }
+      header .navbar .container-fluid .redes .link-redes:hover {
+        transform: scale(1.15); }
   header .navbar .container-fluid .navbar-brand {
     display: flex;
     justify-content: center; }
@@ -130,13 +147,11 @@ footer {
     width: 40%; }
   header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item {
     font-size: 1.8rem; }
-  .main-home {
-    height: 80vh; }
-    .main-home .video .yt-link {
-      width: 490px;
-      height: 280px; }
-    .main-home .bbc p {
-      font-size: 1.2rem; } }
+  .main-home .video .yt-link {
+    width: 490px;
+    height: 280px; }
+  .main-home .bbc p {
+    font-size: 1.2rem; } }
 
 /*screen 1280px*/
 @media screen and (min-width: 1280px) {
@@ -189,7 +204,8 @@ footer {
     -webkit-text-stroke-color: #000000; }
   .main-miembros .miembro img {
     width: 60%;
-    margin: 1rem; }
+    margin: 1rem;
+    border: #000000 solid 4px; }
   .main-miembros .miembro .bio {
     background-color: #414141;
     max-width: 700px;
@@ -204,7 +220,8 @@ footer {
       color: #ff8181; }
   .main-miembros .miembro-dos img {
     max-width: 60%;
-    margin: 1rem; }
+    margin: 1rem;
+    border: #000000 solid 4px; }
   .main-miembros .miembro-dos .bio {
     background-color: #414141;
     max-width: 700px;
@@ -298,11 +315,46 @@ footer {
     text-align: center;
     -webkit-text-stroke: 0.4px;
     -webkit-text-stroke-color: #000000; }
-  .main-discografia .albums div {
+  .main-discografia .albums .disco {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 1.2rem;
-    transition: all 300ms; }
-    .main-discografia .albums div:hover {
+    transition: all 300ms;
+    border: #131313 solid 8px; }
+    .main-discografia .albums .disco:hover {
       transform: scale(1.05); }
+    .main-discografia .albums .disco .album {
+      position: relative;
+      height: 300px;
+      width: 300px;
+      overflow: hidden;
+      border-radius: 6px;
+      box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5); }
+      .main-discografia .albums .disco .album img {
+        width: 100%;
+        height: 100%;
+        transition: all 500ms ease-out; }
+      .main-discografia .albums .disco .album .capa {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(56, 56, 56, 0.7);
+        transition: all 500ms ease-out;
+        opacity: 0;
+        padding: 1rem;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 1.5rem;
+        color: #ffffff; }
+        .main-discografia .albums .disco .album .capa:hover {
+          opacity: 1;
+          visibility: visible; }
 
 /*screen 760px*/
 @media screen and (min-width: 760px) {
@@ -366,8 +418,11 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #414141; }
+  background-color: #414141;
+  margin: 1rem;
+  border-radius: 1rem; }
   .albm .img-albums {
+    border: #131313 solid 8px;
     display: flex;
     justify-content: center; }
     .albm .img-albums img {
