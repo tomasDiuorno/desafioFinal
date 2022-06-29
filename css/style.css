@@ -106,6 +106,9 @@ header {
 
 /* estilos de footer */
 footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   padding: 1rem;
   width: 100vw;
   position: absolute;
@@ -114,6 +117,12 @@ footer {
   footer .copy {
     color: white;
     font-size: 1.2rem; }
+  footer .redes-container .wsp-per {
+    text-decoration: none; }
+    footer .redes-container .wsp-per img {
+      width: 50px; }
+  footer .redes-container .insta-per img {
+    width: 40px; }
 
 /*media screen 760px*/
 @media screen and (min-width: 760px) {
@@ -541,7 +550,7 @@ footer {
     text-align: center;
     -webkit-text-stroke: 0.4px;
     -webkit-text-stroke-color: #000000; }
-  .main-contacto .mail-contacto p {
+  .main-contacto .contacto-per .mail-contacto p {
     color: #ffffff;
     font-family: 'Bebas Neue', cursive;
     font-size: 1.2rem; }
@@ -573,7 +582,7 @@ footer {
     display: block; }
   .main-contacto .title-contacto {
     font-size: 1.8rem; }
-  .main-contacto .mail-contacto p {
+  .main-contacto .contacto-per .mail-contacto p {
     font-size: 1.5rem; }
   .main-contacto .envianos-tu-msj {
     font-size: 1.8rem; } }
@@ -582,7 +591,7 @@ footer {
 @media screen and (min-width: 1280px) {
   .main-contacto .title-contacto {
     font-size: 2rem; }
-  .main-contacto .mail-contacto p {
+  .main-contacto .contacto-per .mail-contacto p {
     font-size: 1.8rem; }
   .main-contacto div .envianos-tu-msj {
     font-size: 2rem; } }

@@ -112,6 +112,9 @@ header{
 /* estilos de footer */
 
 footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     padding: 1rem;
     width: 100vw;
     position: absolute;
@@ -120,6 +123,19 @@ footer{
     .copy{
         color: $color-sec;
         font-size: 1.2rem;
+    }
+    .redes-container{
+        .wsp-per{
+            text-decoration: none;
+            img{
+                width: 50px
+            }
+        }
+        .insta-per{
+            img{
+                width: 40px;
+            }
+        }
     }
 }
 
@@ -691,11 +707,13 @@ footer{
     .title-contacto {
         @include subtitulos;
     }
-    .mail-contacto {
-        p{
-            color: #ffffff;
-            font-family: 'Bebas Neue', cursive;
-            font-size: 1.2rem;
+    .contacto-per{
+        .mail-contacto {
+            p{
+                color: #ffffff;
+                font-family: 'Bebas Neue', cursive;
+                font-size: 1.2rem;
+            }
         }
     }
     .envianos-tu-msj {
@@ -728,9 +746,11 @@ footer{
         .title-contacto { 
             font-size: $medida-terc;               
         }
-        .mail-contacto {
-            p{
-                font-size: $medida-secun;
+        .contacto-per{
+            .mail-contacto {
+                p{
+                    font-size: $medida-secun;
+                }
             }
         }
         .envianos-tu-msj {
@@ -745,10 +765,12 @@ footer{
         .title-contacto { 
             font-size: $medida-ppal;               
         }
-        .mail-contacto {
-            p{
-                font-size: $medida-terc;
-            }    
+        .contacto-per{
+            .mail-contacto {
+                p{
+                    font-size: $medida-terc;
+                }    
+            }
         }
         div{
             .envianos-tu-msj {
